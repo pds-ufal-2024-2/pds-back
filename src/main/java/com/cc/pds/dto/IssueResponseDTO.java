@@ -1,6 +1,7 @@
 package com.cc.pds.dto;
 
 import com.cc.pds.domain.IssueDescription;
+import com.cc.pds.domain.Location;
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,10 +9,6 @@ import lombok.Data;
 @Builder
 @Data
 public class IssueResponseDTO {
-    private String neighborhood;
-    private String street;
-    private String nearestHouseNumber;
-    private String referencePoint;
-    private String zipCode;
+    private Location location;
     private IssueDescription issueDescription;
 }

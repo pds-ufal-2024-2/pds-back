@@ -16,6 +16,10 @@ WORKDIR /app
 
 COPY --from=builder /app/target/*.jar app.jar
 
+RUN mkdir -p /app/sqlite
+
+RUN touch /app/database.db
+
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

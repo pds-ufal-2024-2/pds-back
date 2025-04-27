@@ -1,11 +1,14 @@
 package com.cc.pds.domain;
 
+import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Embeddable
 public class IssueDescription {
 
     @NotBlank(message = "issueCategory is required")

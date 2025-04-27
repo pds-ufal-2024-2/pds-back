@@ -1,10 +1,14 @@
 package com.cc.pds.domain;
 
+import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import lombok.Data;
+import lombok.*;
 
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Embeddable
 public class Location {
 
     @NotBlank(message = "Neighborhood is required")
